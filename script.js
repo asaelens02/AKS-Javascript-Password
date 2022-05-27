@@ -1,4 +1,6 @@
 // Assignment code here
+
+
 var length = Number(prompt("Choose number of characters for password"));
 
 var upChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -13,35 +15,34 @@ var charSet = [upChar,loChar,numChar,spChar];
 
 var Type = (prompt("Choose Character Type:Uppercase, lowercase, number, special"));
   
-  if (Type==="uppercase" || Type==="UPPERCASE");
+if (Type==="uppercase" || Type==="UPPERCASE") 
  
-  var randomNumber= function() {
+  var randomNumber=  function randomNumber() {
 
-    var value= Math.floor(Math.random()*(26))+2;
-
-    return value;
-  
-  }
-
-  ();
-
-  console.log(upChar[randomNumber]);
-
-
-  
-  if (Type==="lowercase" || Type==="LOWERCASE");
-
-  var randomNumber= function() {
-
-    var value= Math.floor(Math.random()*(26))+2;
+   var value = Math.floor(Math.random() * (26)) + 2;
 
     return value;
   
   }
 
-  ();
+()
+  
+    console.log(upChar[randomNumber]);
+  
 
-  console.log(loChar[randomNumber]);
+if  (Type==="lowercase" || Type==="LOWERCASE") 
+
+  var randomNumber= function() {
+
+    var value= Math.floor(Math.random()*(26))+2;
+  
+    return value;
+
+  }
+
+  ()
+
+  console.log (loChar[randomNumber]);
 
 
   if (Type==="numerical" || Type==="NUMERICAL");
@@ -54,7 +55,7 @@ var Type = (prompt("Choose Character Type:Uppercase, lowercase, number, special"
   
   }
 
-  ();
+  ()
 
   console.log(numChar[randomNumber]);
 
@@ -71,9 +72,10 @@ var Type = (prompt("Choose Character Type:Uppercase, lowercase, number, special"
   
   }
 
-  ();
+  ()
 
-  console.log(spChar[randomNumber]);
+  console.log(spChar[randomNumber])
+
 
 
 
