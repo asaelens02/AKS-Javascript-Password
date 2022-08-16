@@ -15,62 +15,60 @@ var spChar = ["!","@","#","$","%","^","&","*","(",")","<",">","+","=","?","/"];
 
 function generatePassword() {
 
-  var password= "";
+  var passwordGenerate= "";
   var pChar="";
 
   var length= Number(prompt("How many characters would you like your password to be? Choose a number between 8 and 128"));
 
   length=parseInt(length);
+  console.log("length", length);//checking for length entered
 
   alert("Please follow the prompts to select character categories for your password");
 
 
 
   var loCharSelect = confirm("Would you like to use lowercase characters?");
+  console.log("here", loCharSelect) //checking if selecting lower case
 
   if (loCharSelect) {
 
-   var randomNumber= function() {
-
-   var value= Math.floor(Math.random()*(26))+2;
-  
-    return value;
-
-   }
-
-    pChar += loChar[randomNumber];
-
+    var value= Math.floor(Math.random()*(26))+2;
+    pChar += loChar[value]; //loChar[5] -> pChar -> "f"
+    console.log("pChar", pChar, "random",value);
     
   }
 
   var upCharSelect = confirm ("Would you like to use UPPERCASE characters?");
 
   if (upCharSelect){
+    var value= Math.floor(Math.random()*(26))+2;
+    pChar += upChar[value];
+    console.log("upChar", pChar);
 
-    pChar += upChar;
   }
 
   var numCharSelect= confirm ("Would you like to use numbers in your password?");
 
   if (numCharSelect){
-
-    pChar += numChar;
+    var value= Math.floor(Math.random()*(10))+2;
+    pChar += numChar[value];
 
   }
 
   var spCharSelect = confirm ("Lastly, would you like to make your password extra secure using special characters?");
 
   if (spCharSelect){
-
-    pChar += spChar;
+    var value= Math.floor(Math.random()*(16))+2;
+    pChar += spChar[value];
   }
 
   for(var i=0; i<length; i++){
 
-    password=pChar[Math.floor(Math.random()*pChar.length)];
+    passwordGenerate += pChar[Math.floor(Math.random()*pChar.length)];
 
   }
-
+  console.log("password",passwordGenerate);
+  return passwordGenerate
 }
 
 //generatePassword();
@@ -86,6 +84,9 @@ function writePassword() {
 }
 
 generateBtn.addEventListener("click", writePassword)
+  
+  
+  
 
 //writePassword();
 //var Type = (prompt("Choose Character Type:Uppercase, lowercase, number, special"));
